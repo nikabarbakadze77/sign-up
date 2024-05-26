@@ -1,0 +1,140 @@
+:root {
+    --DarkGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Tomato: hsl(4, 100%, 67%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--DarkGrey);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+
+    .window {
+        background-color: var(--White);
+        padding: 30px;
+        border-radius: 20px;
+
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+
+        .left-side {
+            .text {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+
+                h2 {
+                    font-size: 38px;
+                }
+
+                .criteriums {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .criterium-contant {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                    }
+                }
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 30px;
+
+                .email-title {
+                    display: flex;
+                    justify-content: space-between;
+
+                    p {
+                        font-size: 12px;
+                        color: red;
+                        display: none;
+                    }
+
+                    b {
+                        font-size: 12px;
+                    }
+                }
+
+
+                input {
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 10px;
+                    
+                    
+                }
+
+                button {
+                    background-color: var(--CharcoalGrey);
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 10px;
+                    color: var(--White);
+                    transition: 0.5s;
+                }
+
+                button:hover {
+                    background-color: var(--Tomato);
+                }
+            }
+
+        }
+    }
+
+
+    .popup {
+        .window {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            display: none;
+
+            h2 {
+                max-width: 200px
+            }
+            p {
+                max-width: 300px;
+            }
+
+            button.dismiss {
+                background-color: var(--CharcoalGrey);
+                color: var(--White);
+                width: 100%;
+                padding: 10px;
+                border-radius: 10px;
+                transition: 0.5s;
+            }
+            button.dismiss:hover {
+                background-color: var(--Tomato);
+            }
+        }
+    }
+
+    .open-popup {
+        display: block;
+    }
+
+}
